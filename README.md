@@ -41,37 +41,35 @@ Um sistema bancário completo com interface gráfica construído com Java e Java
 
 ### Tela inicial
 
-![Tela inicial](./images/init.png)
+![Tela inicial](images/init.png)
 
 ### Criando Conta
 
-![Criando Pessoa](./images/createClient.png)
-![Selecionando Pessoa](./images/selectClient.png)
-![Selecionando Tipo de Conta](./images/accountType.png)
+![Criando Pessoa](images/createClient.png)
+![Selecionando Pessoa](images/selectClient.png)
+![Selecionando Tipo de Conta](images/accountType.png)
 
 ### Informações das contas
 
-![Tela de Informação de Conta](./images/accountInfo1.png)
-![Tela de Informação de Conta](./images/accountInfo2.png)
-![Tela de Informação de Conta](./images/accountInfo3.png)
-![Tela de Informação de Conta](./images/accountInfo4.png)
+![Tela de Informação de Conta](images/accountInfo1.png)
+![Tela de Informação de Conta](images/accountInfo2.png)
+![Tela de Informação de Conta](images/accountInfo3.png)
+![Tela de Informação de Conta](images/accountInfo4.png)
 
 ### Gerenciamento de Conta
 
-![Tela de Gerenciamento de Conta](./images/accMan1.png)
-![Tela de Gerenciamento de Conta](./images/accMan2.png)
-![Tela de Gerenciamento de Conta](./images/accMan3.png)
-![Tela de Gerenciamento de Conta](./images/accMan4.png)
-![Tela de Gerenciamento de Conta](./images/accMan5.png)
-![Tela de Gerenciamento de Conta](./images/accMan6.png)
-![Tela de Gerenciamento de Conta](./images/accMan7.png)
+![Tela de Gerenciamento de Conta](images/accMan1.png)
+![Tela de Gerenciamento de Conta](images/accMan2.png)
+![Tela de Gerenciamento de Conta](images/accMan3.png)
+![Tela de Gerenciamento de Conta](images/accMan4.png)
+![Tela de Gerenciamento de Conta](images/accMan5.png)
+![Tela de Gerenciamento de Conta](images/accMan6.png)
+![Tela de Gerenciamento de Conta](images/accMan7.png)
 
 ### Simulação de Tempo
 
-![Tela de Simulação de Tempo Mensal](./images/timePassageM.png)
-![Tela de Simulação de Tempo Anual](./images/timePassageY.png)
-
-###
+![Tela de Simulação de Tempo Mensal](images/timePassageM.png)
+![Tela de Simulação de Tempo Anual](images/timePassageY.png)
 
 ## Requisitos
 
@@ -92,6 +90,12 @@ Este comando irá:
 2. Baixar todas as dependências necessárias
 3. Iniciar a aplicação JavaFX
 
+### Executando sem interface gráfica
+
+```bash
+mvn exec:java -Dexec.mainClass="br.com.devcoelho.App"
+```
+
 ## Gerando um JAR
 
 Para construir um JAR executável:
@@ -107,7 +111,7 @@ Isso criará um arquivo JAR no diretório `target`. Observe que executar o JAR d
 - `br.com.devcoelho` - Pacote principal
   - `exceptions` - Exceções personalizadas usadas no sistema
   - `interfaces` - Definições de interfaces
-  - `persistence` - Classes para carregamento/salvamento de dados
+  - `persistence` - Classes para carregamentsalvamento de dados
   - `ui` - Componentes de interface do usuário JavaFX
 
 ### Classes Principais
