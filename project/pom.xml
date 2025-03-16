@@ -113,6 +113,45 @@
                 <mainClass>br.com.devcoelho.ui.MainApplication</mainClass>
             </configuration>
         </plugin>
+        <plugin>
+            <groupId>org.panteleyev</groupId>
+            <artifactId>jpackage-maven-plugin</artifactId>
+            <version>1.4.0</version>
+            <configuration>
+                <name>BankingSystem</name>
+                <appVersion>1.0.0</appVersion>
+                <vendor>YourName</vendor>
+                <destination>target/dist</destination>
+                <module>br.com.devcoelho/br.com.devcoelho.ui.MainApplication</module>
+                <runtimeImage>target/jlink-image</runtimeImage>
+                <javaOptions>
+                    <option>-Xmx2048m</option>
+                </javaOptions>
+                <winShortcut>true</winShortcut>
+                <winMenu>true</winMenu>
+                <winMenuGroup>BankingSystem</winMenuGroup>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.4.1</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                        <transformers>
+                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <mainClass>br.com.devcoelho.ui.MainApplication</mainClass>
+                            </transformer>
+                        </transformers>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
