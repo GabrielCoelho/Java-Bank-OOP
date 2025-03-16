@@ -139,6 +139,7 @@ public class BankInvestmentAccount extends BankAccount {
     private final double principal;
     private final double annualRate;
     private final long startTimeMillis;
+    private long additionalTimeMillis = 0;
 
     public Investment(String name, double principal, double annualRate) {
       this.name = name;
@@ -160,16 +161,39 @@ public class BankInvestmentAccount extends BankAccount {
     }
 
     /**
+     * Advances the investment time by a number of months
+     *
+     * @param months number of months to advance
+     */
+    public void advanceTime(int months) {
+      // Convert months to milliseconds (approximate)
+      long monthsInMillis = months * 30L * 24L * 60L * 60L * 1000L;
+      additionalTimeMillis += monthsInMillis;
+    }
+
+    /**
      * Calculates the current value of the investment based on time elapsed
      *
      * @return the current value
      */
     public double getCurrentValue() {
-      double yearsElapsed =
-          (System.currentTimeMillis() - startTimeMillis) / (1000.0 * 60 * 60 * 24 * 365);
+      // Calculate natural time elapsed plus simulated time
+      long totalTimeMillis = (System.currentTimeMillis() - startTimeMillis) + additionalTimeMillis;
+      double yearsElapsed = totalTimeMillis / (365.0 * 24 * 60 * 60 * 1000);
 
       // Compound interest formula: P * (1 + r)^t
       return principal * Math.pow(1 + annualRate, yearsElapsed);
+    }
+  }
+
+  /**
+   * Simulates time passage for investments
+   *
+   * @param months number of months to simulate
+   */
+  public void simulateInvestmentTimePassage(int months) {
+    for (Investment investment : investments.values()) {
+      investment.advanceTime(months);
     }
   }
 }

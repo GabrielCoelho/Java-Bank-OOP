@@ -126,7 +126,7 @@ public abstract class BankAccount implements BankInterface {
   }
 
   /** Records a transaction in the account history */
-  protected void recordTransaction(
+  public void recordTransaction(
       TransactionType type, double amount, BankInterface destinationAccount) {
     Transaction transaction = new Transaction(type, amount, new Date(), this, destinationAccount);
     this.transactionHistory.add(transaction);
