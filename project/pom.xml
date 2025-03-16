@@ -118,9 +118,9 @@
             <artifactId>jpackage-maven-plugin</artifactId>
             <version>1.4.0</version>
             <configuration>
-                <name>BankingSystem</name>
+                <name>PotatosBank</name>
                 <appVersion>1.0.0</appVersion>
-                <vendor>YourName</vendor>
+                <vendor>Gabriel Coelho Soares</vendor>
                 <destination>target/dist</destination>
                 <module>br.com.devcoelho/br.com.devcoelho.ui.MainApplication</module>
                 <runtimeImage>target/jlink-image</runtimeImage>
