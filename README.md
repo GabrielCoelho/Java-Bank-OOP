@@ -39,7 +39,39 @@ Um sistema bancário completo com interface gráfica construído com Java e Java
 
 ## Capturas de Tela
 
-*(Aqui você incluiria capturas de tela das principais telas)*
+### Tela inicial
+
+![Tela inicial](./images/init.png)
+
+### Criando Conta
+
+![Criando Pessoa](./images/createClient.png)
+![Selecionando Pessoa](./images/selectClient.png)
+![Selecionando Tipo de Conta](./images/accountType.png)
+
+### Informações das contas
+
+![Tela de Informação de Conta](./images/accountInfo1.png)
+![Tela de Informação de Conta](./images/accountInfo2.png)
+![Tela de Informação de Conta](./images/accountInfo3.png)
+![Tela de Informação de Conta](./images/accountInfo4.png)
+
+### Gerenciamento de Conta
+
+![Tela de Gerenciamento de Conta](./images/accMan1.png)
+![Tela de Gerenciamento de Conta](./images/accMan2.png)
+![Tela de Gerenciamento de Conta](./images/accMan3.png)
+![Tela de Gerenciamento de Conta](./images/accMan4.png)
+![Tela de Gerenciamento de Conta](./images/accMan5.png)
+![Tela de Gerenciamento de Conta](./images/accMan6.png)
+![Tela de Gerenciamento de Conta](./images/accMan7.png)
+
+### Simulação de Tempo
+
+![Tela de Simulação de Tempo Mensal](./images/timePassageM.png)
+![Tela de Simulação de Tempo Anual](./images/timePassageY.png)
+
+###
 
 ## Requisitos
 
