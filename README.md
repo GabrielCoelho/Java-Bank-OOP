@@ -2,6 +2,8 @@
 
 Um sistema bancário completo com interface gráfica construído com Java e JavaFX. Esta aplicação permite gerenciar contas bancárias, realizar transações e acompanhar investimentos.
 
+![Video com Funcionalidades](images/bank.mp4)
+
 ## Executando a Aplicação
 
 A maneira mais simples de executar a aplicação é usando o Maven:
