@@ -2,6 +2,35 @@
 
 Um sistema bancário completo com interface gráfica construído com Java e JavaFX. Esta aplicação permite gerenciar contas bancárias, realizar transações e acompanhar investimentos.
 
+## Executando a Aplicação
+
+A maneira mais simples de executar a aplicação é usando o Maven:
+
+```
+mvn javafx:run --file project/pom.xml
+```
+
+Este comando irá:
+
+1. Compilar a aplicação
+2. Baixar todas as dependências necessárias
+3. Iniciar a aplicação JavaFX
+
+> **Observação**: Usuários Windows ou Mac precisam editar o `pom.xml` na linha `62`, conforme o comentário. Estará "linux" (S.O. utilizado no desenvolvimento) e deverá ser trocado conforme seu sistema operacional.
+
+### Executando sem interface gráfica
+
+```bash
+mvn exec:java -Dexec.mainClass="br.com.devcoelho.App" --file project/pom.xml
+```
+
+## Requisitos
+
+- Java 11 ou superior
+- [Maven](https://maven.apache.org/) 3.6 ou superior
+- *Sugiro a instalação pelo [SDKMAN!](https://sdkman.io/)
+
+
 ## Funcionalidades
 
 ### Gerenciamento de Contas
@@ -71,30 +100,6 @@ Um sistema bancário completo com interface gráfica construído com Java e Java
 ![Tela de Simulação de Tempo Mensal](images/timePassageM.png)
 ![Tela de Simulação de Tempo Anual](images/timePassageY.png)
 
-## Requisitos
-
-- Java 11 ou superior
-- Maven 3.6 ou superior
-
-## Executando a Aplicação
-
-A maneira mais simples de executar a aplicação é usando o Maven:
-
-```
-mvn javafx:run
-```
-
-Este comando irá:
-
-1. Compilar a aplicação
-2. Baixar todas as dependências necessárias
-3. Iniciar a aplicação JavaFX
-
-### Executando sem interface gráfica
-
-```bash
-mvn exec:java -Dexec.mainClass="br.com.devcoelho.App"
-```
 
 ## Gerando um JAR
 
